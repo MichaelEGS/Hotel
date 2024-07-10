@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.cbHabitacion = new System.Windows.Forms.ComboBox();
             this.dateTimeCheckout = new System.Windows.Forms.DateTimePicker();
             this.dateTimeCheckin = new System.Windows.Forms.DateTimePicker();
@@ -38,12 +39,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.cbHabitacion);
             this.panel1.Controls.Add(this.dateTimeCheckout);
@@ -56,60 +57,82 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(944, 418);
+            this.panel1.Size = new System.Drawing.Size(708, 340);
             this.panel1.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(282, 0);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(219, 20);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Agrega una nueva reserva";
             // 
             // cbHabitacion
             // 
             this.cbHabitacion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbHabitacion.FormattingEnabled = true;
-            this.cbHabitacion.Location = new System.Drawing.Point(355, 263);
+            this.cbHabitacion.Location = new System.Drawing.Point(266, 214);
+            this.cbHabitacion.Margin = new System.Windows.Forms.Padding(2);
             this.cbHabitacion.Name = "cbHabitacion";
-            this.cbHabitacion.Size = new System.Drawing.Size(163, 24);
+            this.cbHabitacion.Size = new System.Drawing.Size(123, 21);
             this.cbHabitacion.TabIndex = 17;
             // 
             // dateTimeCheckout
             // 
             this.dateTimeCheckout.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimeCheckout.Location = new System.Drawing.Point(355, 196);
+            this.dateTimeCheckout.Location = new System.Drawing.Point(266, 159);
+            this.dateTimeCheckout.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeCheckout.Name = "dateTimeCheckout";
-            this.dateTimeCheckout.Size = new System.Drawing.Size(275, 22);
+            this.dateTimeCheckout.Size = new System.Drawing.Size(207, 20);
             this.dateTimeCheckout.TabIndex = 16;
             // 
             // dateTimeCheckin
             // 
             this.dateTimeCheckin.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimeCheckin.Location = new System.Drawing.Point(355, 135);
+            this.dateTimeCheckin.Location = new System.Drawing.Point(266, 110);
+            this.dateTimeCheckin.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeCheckin.Name = "dateTimeCheckin";
-            this.dateTimeCheckin.Size = new System.Drawing.Size(275, 22);
+            this.dateTimeCheckin.Size = new System.Drawing.Size(207, 20);
             this.dateTimeCheckin.TabIndex = 15;
             // 
             // btnGuardar
             // 
             this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnGuardar.Location = new System.Drawing.Point(514, 324);
+            this.btnGuardar.Location = new System.Drawing.Point(386, 263);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(116, 36);
+            this.btnGuardar.Size = new System.Drawing.Size(87, 29);
             this.btnGuardar.TabIndex = 14;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // TxtNombreH
             // 
             this.TxtNombreH.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TxtNombreH.Location = new System.Drawing.Point(382, 59);
+            this.TxtNombreH.Location = new System.Drawing.Point(286, 48);
+            this.TxtNombreH.Margin = new System.Windows.Forms.Padding(2);
             this.TxtNombreH.Name = "TxtNombreH";
-            this.TxtNombreH.Size = new System.Drawing.Size(295, 22);
+            this.TxtNombreH.Size = new System.Drawing.Size(222, 20);
             this.TxtNombreH.TabIndex = 13;
             // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(247, 266);
+            this.label4.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label4.Location = new System.Drawing.Point(185, 216);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 16);
+            this.label4.Size = new System.Drawing.Size(71, 13);
             this.label4.TabIndex = 12;
             this.label4.Text = "# Habitacion:";
             // 
@@ -117,9 +140,11 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(247, 202);
+            this.label3.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label3.Location = new System.Drawing.Point(185, 164);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 16);
+            this.label3.Size = new System.Drawing.Size(59, 13);
             this.label3.TabIndex = 11;
             this.label3.Text = "Check-out:";
             // 
@@ -127,9 +152,11 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(247, 135);
+            this.label2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label2.Location = new System.Drawing.Point(185, 110);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 16);
+            this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 10;
             this.label2.Text = "Check-in:\r\n";
             // 
@@ -137,29 +164,21 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(196, 62);
+            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label1.Location = new System.Drawing.Point(147, 50);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 16);
+            this.label1.Size = new System.Drawing.Size(108, 13);
             this.label1.TabIndex = 9;
             this.label1.Text = "Nombre del huesped:\r\n";
             // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(395, 21);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(228, 20);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "Agrega una nueva reserva";
-            // 
             // AgregarReservacion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(944, 418);
+            this.ClientSize = new System.Drawing.Size(708, 340);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AgregarReservacion";
             this.Text = "AgregarReservacion";
             this.panel1.ResumeLayout(false);

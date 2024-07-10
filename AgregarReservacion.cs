@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Hotel
 {
     public partial class AgregarReservacion : Form
@@ -29,7 +30,9 @@ namespace Hotel
             cbHabitacion.ValueMember = "IdHabitacion";
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+
+
+        private void btnGuardar_Click(object sender, EventArgs e)
         {
             Reservacion newReservation = new Reservacion
             {
@@ -40,7 +43,7 @@ namespace Hotel
             };
 
             servicioDeReserva.AgregarReservacion(newReservation);
-            MessageBox.Show("Reservación agregada exitosamente.");  
+            MessageBox.Show("Reservación agregada exitosamente.");
             this.Close();
         }
     }

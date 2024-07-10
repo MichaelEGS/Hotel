@@ -113,16 +113,19 @@ namespace Hotel
         private void BuscarReservaBtn_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
+            AbrirFormularioHijo(new Buscador_de_Reservas());
         }
 
 
         private void ActualizarReservaBtn_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color3);
+            AbrirFormularioHijo(new Actualizar__Reserva());
         }
         private void EliminarBtn_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color4);
+            AbrirFormularioHijo(new Eliminar_Reserva());
         }
 
         private void AcercadeBtn_Click(object sender, EventArgs e)

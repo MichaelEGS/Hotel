@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using Modelos.EF;
+using System.Data.Entity;
 
 namespace Datos.Models
 {
@@ -36,7 +37,7 @@ namespace Datos.Models
                     var habitacion = _context.Habitaciones.Find(reservacion.IdHabitacion);
                     habitacion.IsAvailable = false;
                     _context.SaveChanges();
-                    transaction.Commit();
+                    transaction.Commit();       
                 }
                 catch (Exception)
                 {
@@ -51,6 +52,19 @@ namespace Datos.Models
 
             return _context.Reservaciones.Include("Habitacion").ToList();
 
+        }
+
+        public Reservacion ObtenerReservacionPorId(int id)
+        {
+            return _context.Reservaciones.Include(r => r.Habitacion).FirstOrDefault(r => r.IdReservacion == id);
+        }
+
+        public List<Reservacion> ObtenerReservacionesPorNombre(string nombreHuesped)
+        {
+            return _context.Reservaciones
+                           .Include(r => r.Habitacion)
+                           .Where(r => r.NombreHuesped.Contains(nombreHuesped))
+                           .ToList();
         }
 
         public void ActualizarReservacion(Reservacion reservacion)
@@ -76,9 +90,12 @@ namespace Datos.Models
             var reservacion = _context.Reservaciones.Find(id);
             if (reservacion != null)
             {
-                _context.Reservaciones.Remove(reservacion);
                 var habitacion = _context.Habitaciones.Find(reservacion.IdHabitacion);
-                habitacion.IsAvailable = true;
+                if (habitacion != null)
+                {
+                    habitacion.IsAvailable = true;  // Pon la habitación como disponible
+                }
+                _context.Reservaciones.Remove(reservacion);
                 _context.SaveChanges();
             }
         }
