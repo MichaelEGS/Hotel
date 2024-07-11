@@ -69,39 +69,61 @@ namespace Datos.Models
 
         public void ActualizarReservacion(Reservacion reservacion)
         {
-            var reservacionExistente = _context.Reservaciones.Find(reservacion.IdReservacion);
-            if (reservacionExistente != null)
+            using (var transaction = _context.Database.BeginTransaction())
             {
-                reservacionExistente.NombreHuesped = reservacion.NombreHuesped;
-                reservacionExistente.CheckInDate = reservacion.CheckInDate;
-                reservacionExistente.CheckOutDate = reservacion.CheckOutDate;
-                reservacionExistente.IdHabitacion = reservacion.IdHabitacion;
+                try
+                {
+                    var reservacionExistente = _context.Reservaciones.Find(reservacion.IdReservacion);
+                    if (reservacionExistente != null)
+                    {
+                        var habitacionAntigua = _context.Habitaciones.Find(reservacionExistente.IdHabitacion);
+                        habitacionAntigua.IsAvailable = true;
 
-                var habitacion = _context.Habitaciones.Find(reservacionExistente.IdHabitacion);
-                habitacion.IsAvailable = false;
+                        reservacionExistente.NombreHuesped = reservacion.NombreHuesped;
+                        reservacionExistente.CheckInDate = reservacion.CheckInDate;
+                        reservacionExistente.CheckOutDate = reservacion.CheckOutDate;
+                        reservacionExistente.IdHabitacion = reservacion.IdHabitacion;
 
-                _context.SaveChanges();
+                        var habitacionNueva = _context.Habitaciones.Find(reservacion.IdHabitacion);
+                        habitacionNueva.IsAvailable = false;
+
+                        _context.SaveChanges();
+                        transaction.Commit();
+                    }
+                }
+                catch (Exception)
+                {
+                    transaction.Rollback();
+                    throw;
+                }
             }
-
         }
 
         public void EliminarReservacion(int id)
         {
-            var reservacion = _context.Reservaciones.Find(id);
-            if (reservacion != null)
+            using (var transaction = _context.Database.BeginTransaction())
             {
-                var habitacion = _context.Habitaciones.Find(reservacion.IdHabitacion);
-                if (habitacion != null)
+                try
                 {
-                    habitacion.IsAvailable = true;  // Pon la habitación como disponible
+                    var reservacion = _context.Reservaciones.Find(id);
+                    if (reservacion != null)
+                    {
+                        var habitacion = _context.Habitaciones.Find(reservacion.IdHabitacion);
+                        habitacion.IsAvailable = true;
+                        _context.Reservaciones.Remove(reservacion);
+                        _context.SaveChanges();
+                        transaction.Commit();
+                    }
                 }
-                _context.Reservaciones.Remove(reservacion);
-                _context.SaveChanges();
+                catch (Exception)
+                {
+                    transaction.Rollback();
+                    throw;
+                }
             }
         }
+
     }
-
-
 }
 
 

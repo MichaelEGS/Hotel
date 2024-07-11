@@ -33,7 +33,7 @@ namespace Hotel
             var reservaciones = servicioDeReserva.ObtenerTodasLasReservaciones();
             var reservacionViews = reservaciones.Select(r => new ReservacionView
             {
-                IdReservacion = r.IdReservacion,
+                IdReservacion = r.IdReservacion,     
                 NombreHuesped = r.NombreHuesped,
                 CheckInDate = r.CheckInDate,
                 CheckOutDate = r.CheckOutDate,
@@ -110,5 +110,4 @@ namespace Hotel
                     MessageBox.Show("Por favor, seleccione una reservación para actualizar.");
                 }
             }
-        
-}   }
+    }   }

@@ -63,6 +63,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
     <Compile Include="Actualizar  Reserva.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,7 +101,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\DvgView.cs" />
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Actualizar  Reserva.resx">
       <DependentUpon>Actualizar  Reserva.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,11 +135,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -146,25 +155,43 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\PNJ.png" />
+    <None Include="Resources\m,.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\hhh.png" />
+    <None Include="Resources\nice.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\XD.png" />
+    <None Include="Resources\Logo con Iniciales de Nombre Sencillo Tipográfico Circular Blanco y Negro %28161 x 70 px%29 %281331 x 865 px%29 %28800 x 500 px%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\XD1.png" />
+    <None Include="Resources\icons8-eliminar-30.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\XD2.png" />
+    <None Include="Resources\icons8-eliminar-301.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Ahora es.png" />
+    <None Include="Resources\8155520_close_delete_remove_cancel_trash_icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\LOGOMENY.png" />
+    <None Include="Resources\8686776_ic_fluent_arrow_maximize_regular_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8674300_ic_fluent_arrow_maximize_regular_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\134215_maximize_full screen_zoom_expand_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10132041_maximize_line_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8674300_ic_fluent_arrow_maximize_regular_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9043594_maximize_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2931142_minimize_minus_remove_line_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

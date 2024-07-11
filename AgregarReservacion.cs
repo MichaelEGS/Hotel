@@ -21,7 +21,10 @@ namespace Hotel
             InitializeComponent();
             servicioDeReserva = new ServicioDeReserva();
             LoadAvailableRooms();
+           
         }
+        
+        
         private void LoadAvailableRooms()
         {
             var availableRooms = servicioDeReserva.ObtenerHabitacionesDisponibles();
@@ -34,17 +37,52 @@ namespace Hotel
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            Reservacion newReservation = new Reservacion
+            if (cbHabitacion.SelectedItem != null && !string.IsNullOrWhiteSpace(TxtNombreH.Text))
             {
+                var nuevaReservacion = new Reservacion
+                //Reservacion newReservation = new Reservacion
+                {
                 NombreHuesped = TxtNombreH.Text,
                 CheckInDate = dateTimeCheckin.Value,
                 CheckOutDate = dateTimeCheckout.Value,
                 IdHabitacion = (int)cbHabitacion.SelectedValue
             };
+                try
+                {
+                    servicioDeReserva.AgregarReservacion(nuevaReservacion);
+                    MessageBox.Show("Reservación agregada exitosamente.");
+                    LoadAvailableRooms();
+                    LimpiarFormulario();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al agregar la reservación: " + ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, complete todos los campos.");
+            }
 
-            servicioDeReserva.AgregarReservacion(newReservation);
-            MessageBox.Show("Reservación agregada exitosamente.");
-            this.Close();
+        }
+
+
+        private void txtNombreHuesped_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir solo letras y teclas de control (como Backspace)
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se permiten letras.", "Error de entrada", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void LimpiarFormulario()
+        {
+            TxtNombreH.Clear();
+            dateTimeCheckin.Value = DateTime.Now;
+            dateTimeCheckout.Value = DateTime.Now;
+            cbHabitacion.SelectedIndex = -1;
         }
     }
+
 }

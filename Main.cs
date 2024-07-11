@@ -131,13 +131,15 @@ namespace Hotel
         private void AcercadeBtn_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color5);
+            AbrirFormularioHijo(new About());
         }
         private void BtnHome_Click(object sender, EventArgs e)
         {
-            ResetMouseEventArgs();
+            currentChildForm.Close();
+            Reset();
         }
-        
-        private void ResetMouseEventArgs()
+
+        private void Reset()
         {
             DisableButton();
             leftBorderBtn.Visible = false;
@@ -145,6 +147,8 @@ namespace Hotel
             iconCurrentChildForm.IconColor = Color.MediumPurple;
             lblTituloFormularioHijo.Text = "Home";
         }
+
+
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -157,7 +161,23 @@ namespace Hotel
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        
+        private void btnexit_Click(object sender, EventArgs e)
+        {
+           Application.Exit();
+        }
+
+        private void BtnMaxi_Click(object sender, EventArgs e)
+        {
+            if(WindowState == FormWindowState.Normal)
+                WindowState = FormWindowState.Maximized;
+            else 
+                WindowState = FormWindowState.Normal;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
     }
 }
 

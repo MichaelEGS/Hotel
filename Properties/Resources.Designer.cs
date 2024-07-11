@@ -63,9 +63,9 @@ namespace Hotel.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Ahora_es {
+        internal static System.Drawing.Bitmap _10132041_maximize_line_icon {
             get {
-                object obj = ResourceManager.GetObject("Ahora es", resourceCulture);
+                object obj = ResourceManager.GetObject("10132041_maximize_line_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace Hotel.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap LOGOMENY {
+        internal static System.Drawing.Bitmap _134215_maximize_full_screen_zoom_expand_icon {
             get {
-                object obj = ResourceManager.GetObject("LOGOMENY", resourceCulture);
+                object obj = ResourceManager.GetObject("134215_maximize_full screen_zoom_expand_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace Hotel.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap PNJ {
+        internal static System.Drawing.Bitmap _2931142_minimize_minus_remove_line_icon {
             get {
-                object obj = ResourceManager.GetObject("PNJ", resourceCulture);
+                object obj = ResourceManager.GetObject("2931142_minimize_minus_remove_line_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace Hotel.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap XD {
+        internal static System.Drawing.Bitmap _8155520_close_delete_remove_cancel_trash_icon {
             get {
-                object obj = ResourceManager.GetObject("XD", resourceCulture);
+                object obj = ResourceManager.GetObject("8155520_close_delete_remove_cancel_trash_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace Hotel.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap XD1 {
+        internal static System.Drawing.Bitmap _8674300_ic_fluent_arrow_maximize_regular_icon {
             get {
-                object obj = ResourceManager.GetObject("XD1", resourceCulture);
+                object obj = ResourceManager.GetObject("8674300_ic_fluent_arrow_maximize_regular_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,90 @@ namespace Hotel.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap XD2 {
+        internal static System.Drawing.Bitmap _8674300_ic_fluent_arrow_maximize_regular_icon__1_ {
             get {
-                object obj = ResourceManager.GetObject("XD2", resourceCulture);
+                object obj = ResourceManager.GetObject("8674300_ic_fluent_arrow_maximize_regular_icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8686776_ic_fluent_arrow_maximize_regular_icon {
+            get {
+                object obj = ResourceManager.GetObject("8686776_ic_fluent_arrow_maximize_regular_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _9043594_maximize_icon {
+            get {
+                object obj = ResourceManager.GetObject("9043594_maximize_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_eliminar_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-eliminar-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_eliminar_301 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-eliminar-301", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kjasdjkaskdsa {
+            get {
+                object obj = ResourceManager.GetObject("kjasdjkaskdsa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo_con_Iniciales_de_Nombre_Sencillo_Tipográfico_Circular_Blanco_y_Negro__161_x_70_px___1331_x_865_px___800_x_500_px_ {
+            get {
+                object obj = ResourceManager.GetObject("Logo con Iniciales de Nombre Sencillo Tipográfico Circular Blanco y Negro (161 x " +
+                        "70 px) (1331 x 865 px) (800 x 500 px)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m_ {
+            get {
+                object obj = ResourceManager.GetObject("m,", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nice {
+            get {
+                object obj = ResourceManager.GetObject("nice", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
